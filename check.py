@@ -1,6 +1,10 @@
-from constants import *
+"""
+check.py
+By Eric-Nicolas
+Defines functions that checks if one of the player won.
+"""
 
-__author__ = 'Eric-Nicolas'
+from constants import *
 
 
 def check_victory(board, player):
