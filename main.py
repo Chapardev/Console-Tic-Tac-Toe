@@ -1,11 +1,9 @@
 """Console Tic Tac Toe"""
 
-__author__ = 'Eric-Nicolas'
+from check import *
 
-NONE = ' '
-CROSS = 'X'
-CIRCLE = 'O'
-STATES = (NONE, CROSS, CIRCLE)
+
+__author__ = 'Eric-Nicolas'
 
 
 def print_board(board):
@@ -25,41 +23,6 @@ def get_value_safely(value, name):
             print("Veuillez entrer un nombre compris entre 0 et 2 (inclus).")
             value = -1
     return value
-
-
-def check_victory(board, player):
-    # Checking rows
-    for x in range(3):
-        for y in range(3):
-            if board[x][y] != STATES[player]:
-                break
-        else:
-            print()
-            return True
-
-    # Checking columns
-    for x in range(3):
-        for y in range(3):
-            if board[y][x] != STATES[player]:
-                break
-        else:
-            print()
-            return True
-
-    # Checking diagonals
-    for i in range(3):
-        if board[i][i] != STATES[player]:
-            break
-    else:
-        return True
-
-    for i in range(3):
-        if board[3-i-1][i] != STATES[player]:
-            break
-    else:
-        return True
-
-    return False
 
 
 def game_loop(board):
