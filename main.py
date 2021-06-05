@@ -2,9 +2,9 @@
 
 __author__ = 'Eric-Nicolas'
 
+NONE = ' '
 CROSS = 'X'
 CIRCLE = 'O'
-NONE = ' '
 STATES = (NONE, CROSS, CIRCLE)
 
 
@@ -59,8 +59,6 @@ def check_victory(board, player):
     else:
         return True
 
-    print()
-
     return False
 
 
@@ -92,7 +90,7 @@ def game_loop(board):
 
 
 def main():
-    board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+    board = [[NONE, NONE, NONE], [NONE, NONE, NONE], [NONE, NONE, NONE]]
     game_loop(board)
 
 
