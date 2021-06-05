@@ -14,6 +14,7 @@ def check_rows(board, player):
                 break
         else:
             return True
+    return False
 
 
 def check_columns(board, player):
@@ -23,6 +24,7 @@ def check_columns(board, player):
                 break
         else:
             return True
+    return False
 
 
 def check_diagonals(board, player):
@@ -37,7 +39,6 @@ def check_diagonals(board, player):
             break
     else:
         return True
-
     return False
 
 
